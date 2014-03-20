@@ -1,0 +1,31 @@
+﻿@model IEnumerable<MvcFinal.Controllers.CADoner>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Doners</h2>
+
+<p>Here are our Doners</p>
+<table>
+    <thread>
+    <tr>
+        <th>Last Name</th>
+        <th>First Name</th>
+        <th>Email</th>
+    </tr>
+</thread>
+    <body>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.LastName)</td>
+                <td>@Html.DisplayFor(modelItem => item.FirstName)</td>
+                <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                <td>@Html.DisplayFor(modelItem => item.Donation)</td>
+            </tr>
+        }
+
+    </body>
+</table>
+
